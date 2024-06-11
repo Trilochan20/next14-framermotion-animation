@@ -1,6 +1,4 @@
-import { HTMLMotionProps } from "framer-motion";
-
-type AnimationType =
+export type AnimationType =
   | "fadeIn"
   | "fadeInUp"
   | "popIn"
