@@ -11,12 +11,12 @@ type AnimationType =
   | "calmInUp"
   | "wiper";
 
-interface Props extends HTMLMotionProps<"div"> {
-  text: string;
-  type?: AnimationType;
-  delay?: number;
-  duration?: number;
-}
+// interface Props extends HTMLMotionProps<"div"> {
+//   text: string;
+//   type?: AnimationType;
+//   delay?: number;
+//   duration?: number;
+// }
 
 export const animationVariants = {
   fadeIn: {
