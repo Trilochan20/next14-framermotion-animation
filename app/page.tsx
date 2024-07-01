@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedDiv from "./component/ui/AnimatedDiv";
+import Marquee from "./component/ui/MarqueeAnimation";
 
 export default function Home() {
   return (
@@ -34,7 +35,6 @@ export default function Home() {
           />
         </div>
       </section>
-
       <section className="bg-white h-screen flex justify-center items-center dark:bg-gray-900">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
@@ -57,32 +57,61 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-white h-screen flex justify-center items-center dark:bg-gray-900">
         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <img
-            className="w-full dark:hidden"
-            src="https://images.pexels.com/photos/20697751/pexels-photo-20697751/free-photo-of-shot-with-oldroll-classic-m.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="dashboard image"
-          />
-          <img
-            className="w-full hidden dark:block"
-            src="https://images.pexels.com/photos/20697751/pexels-photo-20697751/free-photo-of-shot-with-oldroll-classic-m.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="dashboard image"
-          />
-          <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Perspiciatis unde omnis iste natus error sit
-            </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          </div>
+          <AnimatedDiv animationType="whipIn">
+            <img
+              className="w-full dark:hidden"
+              src="https://images.pexels.com/photos/20697751/pexels-photo-20697751/free-photo-of-shot-with-oldroll-classic-m.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="dashboard image"
+            />
+            <img
+              className="w-full hidden dark:block"
+              src="https://images.pexels.com/photos/20697751/pexels-photo-20697751/free-photo-of-shot-with-oldroll-classic-m.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="dashboard image"
+            />
+          </AnimatedDiv>
+          <AnimatedDiv animationType="windshieldWiper">
+            <div className="mt-4 md:mt-0">
+              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                Perspiciatis unde omnis iste natus error sit
+              </h2>
+              <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo.
+              </p>
+            </div>
+          </AnimatedDiv>
         </div>
       </section>
+      <Marquee speed={50} direction="left">
+        <div
+          className="mr-5 border-b border-l border-r border-t border-solid 
+        border-gray-300 rounded-3xl bg-white/10 shadow-lg 
+        flex flex-col items-center justify-center 
+        gap-0 p-5 h-min w-auto relative"
+        >
+          This is a marquee text{" "}
+        </div>
+        <div
+          className="mr-5 border-b border-l border-r border-t border-solid 
+        border-gray-300 rounded-3xl bg-white/10 shadow-lg 
+        flex flex-col items-center justify-center 
+        gap-0 p-5 h-min w-auto relative"
+        >
+          Moving from right to left{" "}
+        </div>
+        <div
+          className="mr-5 border-b border-l border-r border-t border-solid 
+        border-gray-300 rounded-3xl bg-white/10 shadow-lg 
+        flex flex-col items-center justify-center 
+        gap-0 p-5 h-min w-auto relative"
+        >
+          Using Framer Motion{" "}
+        </div>
+      </Marquee>
     </main>
   );
 }
