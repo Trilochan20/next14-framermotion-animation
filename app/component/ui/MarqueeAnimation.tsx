@@ -45,12 +45,12 @@ const Marquee: React.FC<MarqueeProps> = ({
 
   return (
     <div ref={containerRef} className="w-full overflow-hidden">
-      <motion.div className="flex flex-nowrap" animate={controls}>
+      <motion.div className="flex whitespace-nowrap" animate={controls}>
         {[...Array(repeatCount)].map((_, index) => (
           <div
             key={index}
             ref={index === 0 ? contentRef : undefined}
-            className="inline-flex "
+            className="inline-flex"
           >
             {children}
           </div>
