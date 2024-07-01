@@ -44,7 +44,14 @@ const Marquee: React.FC<MarqueeProps> = ({
   }, [contentWidth, speed, direction, controls]);
 
   return (
-    <div ref={containerRef} className="w-full overflow-hidden">
+    <div
+      ref={containerRef}
+      style={{
+        maskImage:
+          "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)",
+      }}
+      className="max-w-[768px] m-auto overflow-hidden "
+    >
       <motion.div className="flex whitespace-nowrap" animate={controls}>
         {[...Array(repeatCount)].map((_, index) => (
           <div

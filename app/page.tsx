@@ -86,32 +86,34 @@ export default function Home() {
           </AnimatedDiv>
         </div>
       </section>
-      <Marquee speed={50} direction="left">
-        <div
-          className="mr-5 border-b border-l border-r border-t border-solid 
+      <div className="my-10">
+        <Marquee speed={50} direction="left">
+          <div
+            className="mr-5 border-b border-l border-r border-t border-solid 
         border-gray-300 rounded-3xl bg-white/10 shadow-lg 
         flex flex-col items-center justify-center 
         gap-0 p-5 h-min w-auto relative"
-        >
-          This is a marquee text{" "}
-        </div>
-        <div
-          className="mr-5 border-b border-l border-r border-t border-solid 
+          >
+            This is a marquee text{" "}
+          </div>
+          <div
+            className="mr-5 border-b border-l border-r border-t border-solid 
         border-gray-300 rounded-3xl bg-white/10 shadow-lg 
         flex flex-col items-center justify-center 
         gap-0 p-5 h-min w-auto relative"
-        >
-          Moving from right to left{" "}
-        </div>
-        <div
-          className="mr-5 border-b border-l border-r border-t border-solid 
+          >
+            Moving from right to left{" "}
+          </div>
+          <div
+            className="mr-5 border-b border-l border-r border-t border-solid 
         border-gray-300 rounded-3xl bg-white/10 shadow-lg 
         flex flex-col items-center justify-center 
         gap-0 p-5 h-min w-auto relative"
-        >
-          Using Framer Motion{" "}
-        </div>
-      </Marquee>
+          >
+            Using Framer Motion{" "}
+          </div>
+        </Marquee>
+      </div>
     </main>
   );
 }
